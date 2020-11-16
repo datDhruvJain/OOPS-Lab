@@ -1,0 +1,32 @@
+Define a class FlightInfo which contains the flightNo, source, destination (all of type String) and cost (of
+type float) and accessible only within the class FlightInfo).
+Define another class FlightListInfo, which holds a member flist (of type ArrayList to hold a list of FlightInfo
+objects).
+Provide the class FlightListInfo, with member functions having the following signatures.
+public FlightListInfo();//initialize the FlightInfo class
+public void addFlightInfo(String fNo, String, String dest, float Cost); //adds the pair (fNo, dest ) to the
+flightDestList
+public ArrayList&lt;FlightInfo&gt; getFlightsSrcDest(String src, String dest); //returns a list of flightInfo from src to
+dest.
+
+Define the class FlightDestinationTester containing the main() method to test the usage of the FlightInfo class,
+(inputs to be read from the user) as follows.
+
+(Comp): Pl. enter the flight No , src, dest and cost (flight no =  to stop) :
+(User): EK101 S1 D1 100
+
+(Comp): Pl. enter the flight No , src, dest and cost (flight no =  to stop) :
+(User): AK102 S2 D1 200
+
+(Comp): Pl. enter the flight No , src, dest and cost (flight no =  to stop) :
+(User): AB103 S1 D1 300
+
+(Comp): Pl. enter the flight No , src, dest and cost (flight no =  to stop) :
+(User): 
+
+(Comp): Pl. enter the src, dest :
+(User): S1 D1
+
+(Comp): List of Flights from src = S1 to dest = D1 :
+(1: EK101 S1 D1 100)
+(2:AB103 S1 D1 300)
