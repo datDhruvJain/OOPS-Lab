@@ -77,4 +77,54 @@ class Circle extends Shape{
 		System.out.println("A Circle of " + radius + " with color " + color + " and  " + filled);
 	}
 } 
+class Rectangle extends Shape{
+	private double width;
+	private double length;
+
+	public Rectangle(){
+		width = 1.0;
+		length = 1.0;
+	}
+
+	public Rectangle(double width, double length){
+		this.width = width;
+		this.length = length;
+	}
+
+	public Rectangle(double width, double length, String color, boolean filled){
+		this.width = width;
+		this.length = length;
+		this.color = color;
+		this.filled = filled;
+
+	}
+	// Setter for length
+	void setLength(boolean length){
+		this.length = length;
+	}
+
+	// Getter for length
+	double getLength(){
+		return length;
+	}
+	// Setter for width
+	void setWidth(boolean width){
+		this.width = width;
+	}
+
+	// Getter for radius
+	double getWidth (){
+		return width;
+	}
+
+	double getArea(){
+		return length*width;
+	}
+
+	double getPerimeter(){
+		return 2*(length + width);
+	}
+
+
+}
 
