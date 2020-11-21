@@ -1,5 +1,4 @@
 import java.util.Scanner;
-class inheritenceTester{}
 class Shape{
 	private String color;
 	private boolean filled;
@@ -125,6 +124,56 @@ class Rectangle extends Shape{
 		return 2*(length + width);
 	}
 
-
+	String toString(){
+		System.out.println("A Rectangle of length " + length + " and width " + width + " with color " + color + " and  " + filled);
+		
+	}
 }
 
+class Square extends Rectangle{
+
+		private double side;
+		private double length;
+
+	public Square(){
+		side = 1.0;
+	}
+
+	public Square(double side){
+		this.side = side;
+	}
+
+	public Square(double side, String color, boolean filled){
+		this.side = side;
+		this.color = color;
+		this.filled = filled;
+
+	}
+	// Setter for length
+	void setSide(boolean side){
+		this.side = side;
+	}
+
+	// Getter for length
+	double getSide(){
+		return side;
+	}
+
+	double getArea(){
+		return side*side;
+	}
+
+	double getPerimeter(){
+		return 4*side;
+	}
+
+	String toString(){
+		System.out.println("A Square of side " + side + " with color " + color + " and  " + filled);
+		
+	}
+}
+class inheritenceTester{
+	public static void main(String[] args){
+
+	}
+}
