@@ -16,6 +16,10 @@ class Node{
 		n2.connections.add(n1.data);
 	}
 
+	void show(){
+		System.out.println(connections);
+	}
+
 
 }
 
@@ -23,6 +27,16 @@ class Graph{
 
 	public static void main(String[] args){
 		
+
+		Node n1 = new Node();
+		Node n2 = new Node();
+		n1.data = "a";
+		n2.data = "b";
+		Node.connect(n1,n2);
+		System.out.println(n1.connections);
+		
+
+		/*
 		Scanner scan = new Scanner(System.in);
 		System.out.println("Enter the number of vertices: ");
 		int num = scan.nextInt();
@@ -34,12 +48,14 @@ class Graph{
 			vertices[i].data = Integer.toString(i);
 			System.out.println("Enter connections of " + i + " vertex: ");
 			String inp = scan.next();
-
+			vertices[i].connect(inp);
+			vertices[i].show();
 			
 		}
 
-		for (int i; i<num;i++){
-			vertices[i].
-		}
+		*/
+		//for (int i; i<num;i++){
+		//	vertices[i].
+		//}
 	}
 }
