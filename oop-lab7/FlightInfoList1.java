@@ -39,6 +39,7 @@ class FlightInfo{
         }
 
 }
+
 class FlightInfoList1{
 
         ArrayList<FlightInfo> flist = new ArrayList<FlightInfo>();
