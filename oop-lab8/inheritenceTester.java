@@ -4,7 +4,7 @@ class Shape{
 	private boolean filled;
 
 	public Shape() {
-		String = "green";
+		String color = "green";
 		filled = true;
 	}
 
@@ -33,15 +33,15 @@ class Shape{
 		filled = set;
 	}
 
-	public void toString(){
-		System.out.println("A shape with color " + color + " and  " + filled);
+	public String toString(){
+		return ("A shape with color " + color + " and  " + filled);
 	}
 }
 class Circle extends Shape{
 	private double radius = 1.0;
-	private static final pi=3.14;
+	private static final double pi=3.14;
 
-	Circle(){radius=1.0}
+	Circle(){radius=1.0;}
 	
 	Circle(double radius){
 		this.radius = radius;
@@ -50,14 +50,13 @@ class Circle extends Shape{
 	Circle(double radius, String color, boolean filled){
 		this.radius = radius;
 		// check this
-		this.color = color;
-		this.filled = filled;
+		this.setColor(color);
+		this.setFilled(filled);
 	}
 
 	// Setter for radius
 	void setRadius(double radius){
-		this.radius = radius;
-	}
+		this.radius = radius;}
 
 	// Getter for radius
 	double getRadius(){
@@ -72,8 +71,8 @@ class Circle extends Shape{
 		return 2*pi*radius;
 	}
 
-	String toString(){
-		System.out.println("A Circle of " + radius + " with color " + color + " and  " + filled);
+	public String toString(){
+		return ("A Circle of " + radius + " with color " + getColor() + " and  " + isFilled());
 	}
 } 
 class Rectangle extends Shape{
@@ -93,12 +92,12 @@ class Rectangle extends Shape{
 	public Rectangle(double width, double length, String color, boolean filled){
 		this.width = width;
 		this.length = length;
-		this.color = color;
-		this.filled = filled;
+		this.setColor(color);
+		this.setFilled(filled);
 
 	}
 	// Setter for length
-	void setLength(boolean length){
+	void setLength(double length){
 		this.length = length;
 	}
 
@@ -107,7 +106,7 @@ class Rectangle extends Shape{
 		return length;
 	}
 	// Setter for width
-	void setWidth(boolean width){
+	void setWidth(double width){
 		this.width = width;
 	}
 
@@ -124,8 +123,9 @@ class Rectangle extends Shape{
 		return 2*(length + width);
 	}
 
-	String toString(){
-		System.out.println("A Rectangle of length " + length + " and width " + width + " with color " + color + " and  " + filled);
+	public String toString(){
+		return "A Rectangle of length " + length + " and width " + width + " with color " + getColor() + " and  " + isFilled();
+
 		
 	}
 }
@@ -145,12 +145,12 @@ class Square extends Rectangle{
 
 	public Square(double side, String color, boolean filled){
 		this.side = side;
-		this.color = color;
-		this.filled = filled;
+		this.setColor(color);
+		this.setFilled(filled);
 
 	}
 	// Setter for length
-	void setSide(boolean side){
+	void setSide(double side){
 		this.side = side;
 	}
 
@@ -167,13 +167,18 @@ class Square extends Rectangle{
 		return 4*side;
 	}
 
-	String toString(){
-		System.out.println("A Square of side " + side + " with color " + color + " and  " + filled);
+	public String toString(){
+		return ("A Square of side " + side + " with color " + getColor() + " and  " + isFilled());
 		
 	}
 }
 class inheritenceTester{
 	public static void main(String[] args){
-
+		Shape s1 = new Shape("green", true);
+		System.out.println(s1.toString());
+		// Rectangle s2 =  new Shape("red",false);
+		// will not work
+		Shape s2 = new Rectangle(1,2,"red",false);
+		System.out.println(s2.toString());
 	}
 }
