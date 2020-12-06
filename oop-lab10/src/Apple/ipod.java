@@ -1,9 +1,13 @@
-public class ipod implements Apple{
+package Apple;
+
+import Apple.Apple;
+
+public class ipod implements Apple {
     String name;
     double computePower;
 
     public ipod(){
-        name = "ipod";
+        name = "Apple.ipod";
         setComputePower(12);
     }
 

@@ -1,10 +1,14 @@
-public class iphone implements Apple{
+package Apple;
+
+import Apple.Apple;
+
+public class ipad implements Apple {
     String name;
     double computePower;
 
-    public iphone(){
-        name = "iphone";
-        setComputePower(40);
+    public ipad(){
+        name = "Apple.ipad";
+        setComputePower(34);
     }
 
     void about(){
