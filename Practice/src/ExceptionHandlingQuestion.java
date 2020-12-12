@@ -20,7 +20,9 @@ class Student{
             }
             this.name = name;
         }
-        catch (NameNotValidException nameProb){}
+        catch (NameNotValidException nameProb){
+            System.out.println(nameProb);
+        }
         try {
             if (age>21 || age<15){
                 throw new AgeNotWithinRangeException();
@@ -44,8 +46,11 @@ class AgeNotWithinRangeException extends Exception{
 }
 
 class NameNotValidException extends Exception{
-    public NameNotValidException(){
-        System.out.println("The name is not Valid!");
+    //public NameNotValidException(){
+    //    System.out.println("The name is not Valid!");
+    //}
+    public String toString(){
+        return "The name is not Valid!";
     }
 }
 
