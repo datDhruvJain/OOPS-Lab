@@ -36,26 +36,24 @@ class Graph{
 		System.out.println(n1.connections);
 		
 
-		/*
-		Scanner scan = new Scanner(System.in);
-		System.out.println("Enter the number of vertices: ");
-		int num = scan.nextInt();
-
-		Node[] vertices = new Node[num];
-		
-		for (int i=0; i<num; i++){
-			vertices[i] = new Node();
-			vertices[i].data = Integer.toString(i);
-			System.out.println("Enter connections of " + i + " vertex: ");
-			String inp = scan.next();
-			vertices[i].connect(inp);
-			vertices[i].show();
-			
-		}
-
-		*/
-		//for (int i; i<num;i++){
-		//	vertices[i].
-		//}
-	}
+//		Scanner scan = new Scanner(System.in);
+//		System.out.println("Enter the number of vertices: ");
+//		int num = scan.nextInt();
+//
+//		Node[] vertices = new Node[num];
+//		
+//		for (int i=0; i<num; i++){
+//			vertices[i] = new Node();
+//			vertices[i].data = Integer.toString(i);
+//			System.out.println("Enter connections of " + i + " vertex: ");
+//			String inp = scan.next();
+//			vertices[i].connect(inp);
+//			vertices[i].show();
+//			
+//		}
+//
+//		for (int i; i<num;i++){
+//			vertices[i].
+//		}
+//	}
 }
