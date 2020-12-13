@@ -3,8 +3,10 @@ public class MultithreadingQuestion1 {
         MyThreadUsingInterface1 one = new MyThreadUsingInterface1();
         MyThreadUsingInterface2 two = new MyThreadUsingInterface2();
 
-        Thread t1 = new Thread(MyThreadUsingInterface1);
-        Thread t2 = new Thread(MyThreadUsingInterface2);
+        Thread t1 = new Thread(one);
+        Thread t2 = new Thread(two);
+	t1.start();
+	t2.start();
     }
 }
 
@@ -19,7 +21,7 @@ class MyThreadUsingInterface1 implements Runnable{
 
 class MyThreadUsingInterface2 implements Runnable{
     public void run(){
-        int arr[] = Helper.reversePrinter(10);
+        Helper.reversePrinter(10);
         }
     }
 
@@ -36,7 +38,8 @@ class Helper{
 
     public static void reversePrinter(int n){
         for (int i =n; i>0; i--){
-            System.out.println(i);
+            System.out.print(i+"\t");
+	    System.out.println();
         }
     }
 }
