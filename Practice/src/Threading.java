@@ -35,6 +35,7 @@ public class Threading{
             one.resume();
             two.resume();
         }
-        catch (Exception e){}
+        catch (Exception e)
+        {}
     }
 }
