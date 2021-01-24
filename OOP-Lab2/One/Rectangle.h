@@ -5,6 +5,7 @@ class Rectangle
 {
 	float length,width, area, perimeter;
 	public:
+	Rectangle();
 	Rectangle(float len, float wid);
 
 	float calculate_area(float len, float wid);
